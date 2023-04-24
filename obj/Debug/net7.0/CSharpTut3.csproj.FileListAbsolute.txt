@@ -1,0 +1,15 @@
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\bin\Debug\net7.0\CSharpTut3.exe
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\bin\Debug\net7.0\CSharpTut3.deps.json
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\bin\Debug\net7.0\CSharpTut3.runtimeconfig.json
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\bin\Debug\net7.0\CSharpTut3.dll
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\bin\Debug\net7.0\CSharpTut3.pdb
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.csproj.AssemblyReference.cache
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.AssemblyInfoInputs.cache
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.AssemblyInfo.cs
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.csproj.CoreCompileInputs.cache
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.dll
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\refint\CSharpTut3.dll
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.pdb
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\CSharpTut3.genruntimeconfig.cache
+C:\Users\ecmat\OneDrive\Documents\C# Work\CSharpTut3\obj\Debug\net7.0\ref\CSharpTut3.dll
