@@ -4,7 +4,7 @@ namespace RecipeBuilder
 {
     class Recipe
     {
-        private string name;
+        private string recname;
         private int numIngredients;
         private string[] ingredients;
         private int[] quantities;
@@ -20,7 +20,7 @@ namespace RecipeBuilder
         public void EnterRecipe()
         {
             Console.WriteLine("Enter recipe name:");
-            name = Console.ReadLine();
+            recname = Console.ReadLine();
             Console.WriteLine("Enter number of ingredients:");
             numIngredients = Convert.ToInt32(Console.ReadLine());
 
@@ -56,7 +56,7 @@ namespace RecipeBuilder
         public void DisplayRecipe()
         {
             Console.WriteLine("\nYour Recipe ");
-            Console.Write("\nRecipe Name : " + name + "\n");
+            Console.Write("\nRecipe Name : " + recname + "\n");
             Console.WriteLine("\nIngredients required for the recipe:");
             for (int i = 0; i < numIngredients; i++)
             {
