@@ -5,7 +5,7 @@ namespace RecipeBuilder
     class Recipe
     {
         private string recname;
-        private int numIngredients;
+        private int numIngre;
         private string[] ingredients;
         private int[] quantities;
         private int[] originalQuantities;
@@ -22,14 +22,14 @@ namespace RecipeBuilder
             Console.WriteLine("Enter recipe name:");
             recname = Console.ReadLine();
             Console.WriteLine("Enter number of ingredients:");
-            numIngredients = Convert.ToInt32(Console.ReadLine());
+            numIngre = Convert.ToInt32(Console.ReadLine());
 
-            ingredients = new string[numIngredients];
-            quantities = new int[numIngredients];
-            originalQuantities = new int[numIngredients];
-            units = new string[numIngredients];
+            ingredients = new string[numIngre];
+            quantities = new int[numIngre];
+            originalQuantities = new int[numIngre];
+            units = new string[numIngre];
 
-            for (int i = 0; i < numIngredients; i++)
+            for (int i = 0; i < numIngre; i++)
             {
                 Console.WriteLine("\nIngredient " + (i + 1) );
                 Console.Write("\nEnter name of ingredient" + (i + 1) + " - ");
@@ -58,7 +58,7 @@ namespace RecipeBuilder
             Console.WriteLine("\nYour Recipe ");
             Console.Write("\nRecipe Name : " + recname + "\n");
             Console.WriteLine("\nIngredients required for the recipe:");
-            for (int i = 0; i < numIngredients; i++)
+            for (int i = 0; i < numIngre; i++)
             {
                 Console.WriteLine("\n" + quantities[i] + " " + units[i] + " of " + ingredients[i]);
             }
@@ -76,7 +76,7 @@ namespace RecipeBuilder
             {
                 case 1:
 
-                for (int i = 0; i < numIngredients; i++)
+                for (int i = 0; i < numIngre; i++)
             {
                 quantities[i] = (quantities[i] / 2);
             }
@@ -84,7 +84,7 @@ namespace RecipeBuilder
                 break;
 
                 case 2:
-                 for (int i = 0; i < numIngredients; i++)
+                 for (int i = 0; i < numIngre; i++)
             {
                 quantities[i] = (quantities[i] * 2);
             }
@@ -92,7 +92,7 @@ namespace RecipeBuilder
                 break;
 
                 case 3:
-                 for (int i = 0; i < numIngredients; i++)
+                 for (int i = 0; i < numIngre; i++)
             {
                 quantities[i] = (quantities[i] * 3);
             }
@@ -104,7 +104,7 @@ namespace RecipeBuilder
         public void ResetQuantities()
         {
             // Reset quantities to their original values
-            for (int i = 0; i < numIngredients; i++)
+            for (int i = 0; i < numIngre; i++)
             {
                 quantities[i] = originalQuantities[i];
             }
@@ -115,7 +115,7 @@ namespace RecipeBuilder
         public void ClearRecipe()
         {
             // Clear all recipe data
-            numIngredients = 0;
+            numIngre = 0;
             Array.Clear(ingredients);
             Array.Clear(units);
             numSteps = 0;
