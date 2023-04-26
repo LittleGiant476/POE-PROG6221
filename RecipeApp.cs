@@ -50,10 +50,10 @@ namespace RecipeBuilder
                 Console.WriteLine("Enter description of step number " + (i + 1) );
                 steps[i] = Console.ReadLine();
             }
-            DisplayRecipe();
+            DisplayRec();
         }
 
-        public void DisplayRecipe()
+        public void DisplayRec()
         {
             Console.WriteLine("\nYour Recipe ");
             Console.Write("\nRecipe Name : " + recname + "\n");
@@ -80,7 +80,7 @@ namespace RecipeBuilder
             {
                 quant[i] = (quant[i] / 2);
             }
-            DisplayRecipe();
+            DisplayRec();
                 break;
 
                 case 2:
@@ -88,7 +88,7 @@ namespace RecipeBuilder
             {
                 quant[i] = (quant[i] * 2);
             }
-            DisplayRecipe();
+            DisplayRec();
                 break;
 
                 case 3:
@@ -96,7 +96,7 @@ namespace RecipeBuilder
             {
                 quant[i] = (quant[i] * 3);
             }
-            DisplayRecipe();
+            DisplayRec();
                 break;
             }
         }
@@ -110,7 +110,7 @@ namespace RecipeBuilder
             }
 
             Console.WriteLine("Your recipe Quantities have been reset \n");
-            DisplayRecipe();
+            DisplayRec();
         }
         public void ClearRecipe()
         {
@@ -150,7 +150,7 @@ namespace RecipeBuilder
                         recipe.EnterRecipe();
                         break;
                     case 2:
-                        recipe.DisplayRecipe();
+                        recipe.DisplayRec();
                         break;
                     case 3:
                         Console.WriteLine("Enter scaling - 0ption 1 -- 0.5",
