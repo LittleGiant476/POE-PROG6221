@@ -70,9 +70,9 @@ namespace RecipeBuilder
             Console.WriteLine("\n");
         }
 
-        public void ScaleRecipe(int factor)
+        public void ScaleRecipe(int scaler)
         {
-            switch(factor)
+            switch(scaler)
             {
                 case 1:
 
@@ -153,12 +153,12 @@ namespace RecipeBuilder
                         recipe.DisplayRec();
                         break;
                     case 3:
-                        Console.WriteLine("Enter scaling - 0ption 1 -- 0.5",
-                        "\noption 2 -- 2",
-                        "\noption 3 -- 3");
-                        int factor;
-                        factor = Convert.ToInt32(Console.ReadLine());
-                        recipe.ScaleRecipe(factor);
+                        Console.WriteLine("Enter scaling - 0ption 1 -- factor by 0.5 or half your recipe",
+                        "\noption 2 -- factor by 2 or double your recipe",
+                        "\noption 3 -- factor by 3 or triple your recipe");
+                        int scaler;
+                        scaler = Convert.ToInt32(Console.ReadLine());
+                        recipe.ScaleRecipe(scaler);
                         break;
                     case 4:
                         recipe.ResetQuantities();
