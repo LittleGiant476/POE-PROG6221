@@ -101,7 +101,7 @@ namespace RecipeBuilder
             }
         }
 
-        public void ResetQuantities()
+        public void ResetQuant()
         {
             // Reset quantities to their original values
             for (int i = 0; i < numIngre; i++)
@@ -123,6 +123,9 @@ namespace RecipeBuilder
             Array.Clear(quant);
 
             Console.WriteLine("All inputs of the recipe are clear");
+            Console.WriteLine("You will now be directed to enter a new recipe \n");
+
+            EnterRecipe();
         }
 
     class Program
@@ -148,9 +151,11 @@ namespace RecipeBuilder
                 {
                     case 1:
                         recipe.EnterRecipe();
+                        Console.ReadKey();
                         break;
                     case 2:
                         recipe.DisplayRec();
+                        Console.ReadKey();
                         break;
                     case 3:
                         Console.WriteLine("Enter scaling - 0ption 1 -- factor by 0.5 or half your recipe",
@@ -159,9 +164,11 @@ namespace RecipeBuilder
                         int scaler;
                         scaler = Convert.ToInt32(Console.ReadLine());
                         recipe.ScaleRecipe(scaler);
+                        Console.ReadKey();
                         break;
                     case 4:
-                        recipe.ResetQuantities();
+                        recipe.ResetQuant();
+                        Console.ReadKey();
                         break;
                     case 5:
                         recipe.ClearRecipe();
