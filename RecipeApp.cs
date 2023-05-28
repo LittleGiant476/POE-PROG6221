@@ -4,14 +4,14 @@ namespace RecipeBuilder
 {
     class Recipe
     {
-        private string recname;
-        private int numIngre;
-        private string[] ingredients;
-        private int[] quant;
-        private int[] originalquant;
-        private string[] units;
-        private int numSteps;
-        private string[] steps;
+        private string recname; // Recipe Name 
+        private int numIngre; // Number of Ingredients 
+        private string[] ingredients; // Array for Ingredients 
+        private int[] quant; // Array For quantity of Ingredients 
+        private int[] originalquant; // Array for orriginal Quantity to reset
+        private string[] units; // Array for Units of Ingredients 
+        private int numSteps; // Number of Steps
+        private string[] steps; // Array to store Steps
 
         public Recipe()
         {
