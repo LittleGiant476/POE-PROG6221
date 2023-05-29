@@ -10,11 +10,9 @@ class Program
     
     // Class representing a Recipe
     class Recipe
-    /* Use getters and setters the instance
-    is the recipe and is a public access modifer
-    so they can be accessed from outside the class
-    the setter would be the NumOfIngreidents and the getter
-    would be the Ingreidents
+    /*
+     * Getters and setters are used to impliment this constructor 
+  
     */
     {
 
@@ -23,28 +21,29 @@ class Program
         public int numIngre { get; set; } //get,set for the number of ingredients 
         public List<ingredient> ingredients { get; set; }// List the number of Ingreidents
         public int numSteps { get; set; } // List the steps in integers
-        public List<string> steps { get; set; }
+        public List<string> steps { get; set; } // Stores the steps captured into a list
 
         public static List<Recipe> recipes = new List<Recipe>();
 
-        public Recipe(string name)
+        public Recipe(string name) // The generic constructor with parameters for all recipes to consist of
         {
             recname = name;
             ingredients = new List<ingredient>();
             steps = new List<string>();
         }
 
-        public static void EnterRecipe()
+        public static void EnterRecipe() // Method to be called to build the recipe
+                                         // Also given the same name as methods from part 1 
         {
 
             Console.WriteLine("Enter the name of the recipe:");
 
             string recipeName = Console.ReadLine();
-            Recipe newRecipe = new Recipe(recipeName);
+            Recipe newRecipe = new Recipe(recipeName); // A constructor accepting the given recipe name by the user
 
             // shows the number of ingreidents
             Console.WriteLine("Enter the number of ingredients you would like to add:");
-            if(!int.TryParse(Console.ReadLine(), out int numIngre)) {
+            if(!int.TryParse(Console.ReadLine(), out int numIngre)) { // IOException handeling 
 
                 Console.WriteLine("Invalid Input, Please insert a number");
                 Main(null);
@@ -57,7 +56,7 @@ class Program
                 string name = Console.ReadLine();
 
                 Console.WriteLine($"Please enter the quantity of ingredient {i + 1}:");
-                if (!double.TryParse(Console.ReadLine(), out double numIngre))
+                if (!double.TryParse(Console.ReadLine(), out double numIngre)) // IOException handeling 
                 {
 
                     Console.WriteLine("Invalid Input, Please insert a number");

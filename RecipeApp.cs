@@ -13,6 +13,10 @@ namespace RecipeBuilder
         private int numSteps; // Number of Steps
         private string[] steps; // Array to store Steps
 
+        /* EnterRecipe - Enters the recipe
+         * DisplayRec - Displays the Recipe
+         */
+
         public Recipe()
         {
             // Default constructor
