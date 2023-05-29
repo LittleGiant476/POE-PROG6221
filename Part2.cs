@@ -218,8 +218,9 @@ class Program
         }
     }
 
-    //-----------------------------------------------------------------------------------------------------------------------------------------------+
-
+    //--------------------------------------------------------------------------------------------------------------------------+
+    //--------------------A Line to seperate the classes from the Main----------------------------------------------------------+
+    //--------------------------------------------------------------------------------------------------------------------------+
     static void Main(string[] args)
     {
 
@@ -227,10 +228,10 @@ class Program
         {
             
             Console.WriteLine("\n");
-            Console.WriteLine("Pick the command you would like to use:");
-            Console.WriteLine("1. Add Recipe");
-            Console.WriteLine("2. View Recipes");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("Please select a command : ");
+            Console.WriteLine("1 --- Add Recipe");
+            Console.WriteLine("2 --- View Recipes");
+            Console.WriteLine("3 --- Exit" + "\n");
             Console.Write("Enter your choice: ");
 
             string choice = Console.ReadLine();
