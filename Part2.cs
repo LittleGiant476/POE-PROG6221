@@ -146,31 +146,31 @@ class Program
         {
             Console.WriteLine($"Recipe: {recname}");//output to ask the name of the recipe
             Console.WriteLine("Ingredients:");
-            for (int i = 0; i <numIngre; i++)
+            for (int i = 0; i <numIngre; i++) // A loop to print all ingridents 
             {
                 Console.WriteLine($"{ingredients[i].Quantity} {ingredients[i].Unit} of {ingredients[i].Name} ({ingredients[i].FoodGroup})");
             }
             Console.WriteLine("Steps:");
-            for (int i = 0; i < numSteps; i++)
+            for (int i = 0; i < numSteps; i++) // A loop to print all the steps 
             {
                 Console.WriteLine($"{i + 1}. {steps[i]}");
             }
         }
-        // calculates the calrories of the recipe
+        // calculates calrories for the recipe
         public double CalculateTotalCalories()
         {
-            double totalCalories = 0;
-            foreach (var ingredient in ingredients)
+            double totalCalories = 0; // Setting the variable to 0 for no null error
+            foreach (var ingredient in ingredients) // a foreach loop to run through the inputs and add up for calculation
             {
                 totalCalories += ingredient.Calories;
             }
             return totalCalories;
         }
 
-        public void CalorieRange()
+        public void CalorieRange() // A prompt to display to the user the range of their calories as per their input 
         {
             double totalCalories = CalculateTotalCalories();
-            Console.WriteLine($"Total Calories: {totalCalories}");
+            Console.WriteLine($"Total Calories: {totalCalories}"); // Will show that the calories is a low amount 
 
             if (totalCalories < 100)
             {
@@ -203,14 +203,16 @@ class Program
         public double Calories { get; set; } // get, set to get the calories
         public string FoodGroup { get; set; } // get,set to add the food group its in
     }
+
     // Display available food group options
     private static readonly List<string> AvailableFoodGroups = new List<string> { "Fruits", "Vegetables", "Grains", "Proteins", "Dairy", "Fats and Oils" };
 
 
-    public static void DisplayFoodGroup()
+    public static void DisplayFoodGroup() // Displays the foog group through a loop when called in other functions for the user
     {
         Console.WriteLine("Available Food Groups:");
-        for (int i = 0; i < AvailableFoodGroups.Count; i++)
+        for (int i = 0; i < AvailableFoodGroups.Count; i++) //The for loop to loop though the options 
+                                                            // A possible foreach loop could of beed used here 
         {
             Console.WriteLine($"{i + 1}. {AvailableFoodGroups[i]}");
         }
@@ -219,15 +221,7 @@ class Program
     static void Main(string[] args)
     {
 
-         
-        
-        /*
-       Used to store the recipe which grows
-       dynamically and can store unlimited recipes
-       */
-
-
-        while (true)
+        while (true) // Updated while loop
         {
             
             Console.WriteLine("\n");
@@ -247,24 +241,22 @@ class Program
 
                     break;
 
-                // display no recipes found if recipe is not there
                 case "2":
 
                     Program.Recipe.DisplayRec();
 
-
                     break;
 
                 case "3":
-                    Environment.Exit(0);
+                    Environment.Exit(0); // A forced Enviroment Exit if the option to exit is selected after an incorrect input
                     return;
 
                 default:
-                    Console.WriteLine("Invalid choice. Please enter a valid choice.");
+                    Console.WriteLine("Invalid choice. Please enter a valid choice."); // If the input of the user for the main menu is not 1 - 3
                     break;
             }
 
-            Console.WriteLine();
+            Console.WriteLine(); // In the event an extra line is needed to defferenciate between completed tasks
         }
     }
 }
