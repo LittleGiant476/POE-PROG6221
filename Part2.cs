@@ -70,7 +70,7 @@ class Program
                 //double calories;
 
                 Console.WriteLine($"Please enter the number of calories for ingredient {i + 1}:");
-                if (!double.TryParse(Console.ReadLine(), out double calories))
+                if (!double.TryParse(Console.ReadLine(), out double calories)) // IOException handeling
                 {
 
                     Console.WriteLine("Invalid Input, Please insert a number");
@@ -79,7 +79,7 @@ class Program
                 //double calories = double.Parse(Console.ReadLine());
 
                 Console.WriteLine($"Please select the food group for ingredient {i + 1}:");
-                DisplayFoodGroup();
+                DisplayFoodGroup(); // method called to view before looped 
                 int foodGroupIndex = int.Parse(Console.ReadLine()) - 1;
                 string foodGroup = AvailableFoodGroups[foodGroupIndex];
 
@@ -87,6 +87,12 @@ class Program
             } // Ending of the for loop for the ingredients 
 
             Console.WriteLine("Please enter the number of steps:");
+            if (!int.TryParse(Console.ReadLine(), out int numSteps))
+            { // IOException handeling 
+
+                Console.WriteLine("Invalid Input, Please insert a number");
+                Main(null);
+            }
             newRecipe.numSteps = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < newRecipe.numSteps; i++) // beginning of the for loop for steps input
