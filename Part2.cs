@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 class Program
-
     
 {
-
-    
     // Class representing a Recipe
     class Recipe
     /*
-     * Getters and setters are used to impliment this constructor 
-  
+     * Getters and setters are used to impliment this constructor
     */
     {
 
@@ -79,10 +75,11 @@ class Program
                 //double calories = double.Parse(Console.ReadLine());
 
                 Console.WriteLine($"Please select the food group for ingredient {i + 1}:");
-                DisplayFoodGroup(); // method called to view before looped 
+                DisplayFoodGroup(); // method called to view before selection 
                 int foodGroupIndex = int.Parse(Console.ReadLine()) - 1;
                 string foodGroup = AvailableFoodGroups[foodGroupIndex];
 
+                // the big add to the major list of all the minor lists
                 newRecipe.ingredients.Add(new ingredient { Name = name, Quantity = quantity, Unit = unit, Calories = calories, FoodGroup = foodGroup });
             } // Ending of the for loop for the ingredients 
 
@@ -142,7 +139,7 @@ class Program
             }
 
         }
-        public void PrintRecipe()
+        public void PrintRecipe() // Method to print out the recipes added to the list when called upon by other functions
         {
             Console.WriteLine($"Recipe: {recname}");//output to ask the name of the recipe
             Console.WriteLine("Ingredients:");
@@ -157,7 +154,7 @@ class Program
             }
         }
         // calculates calrories for the recipe
-        public double CalculateTotalCalories()
+        public double CalculateTotalCalories() // Method to calculate the calories when used in the recipe building function
         {
             double totalCalories = 0; // Setting the variable to 0 for no null error
             foreach (var ingredient in ingredients) // a foreach loop to run through the inputs and add up for calculation
@@ -193,8 +190,11 @@ class Program
         }
     }
 
+    // Ending of the Recipe Class
 
-    // Class showing the ingreidents
+    //-----------------a Line to separate the Recipe Class from the Ingredient Class------------------------------+
+
+    // Begining of the Ingredient class
     class ingredient
     {
         public string Name { get; set; } // get, set to get the recipe name
@@ -217,6 +217,8 @@ class Program
             Console.WriteLine($"{i + 1}. {AvailableFoodGroups[i]}");
         }
     }
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------+
 
     static void Main(string[] args)
     {
